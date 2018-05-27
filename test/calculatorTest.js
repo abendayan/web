@@ -76,6 +76,22 @@ describe('Test the functionnalities of the calculator', () => {
         assert.equal(JSON.parse(s).display, "12");
     });
 
+    it('should verify multiplication by 0', () => {
+        let s = null;
+        s = calculator.calculateNextState(s, "5");
+        assert.equal(JSON.parse(s).display, "5");
+        s = calculator.calculateNextState(s, "-");
+        assert.equal(JSON.parse(s).display, "5");
+        s = calculator.calculateNextState(s, "5");
+        assert.equal(JSON.parse(s).display, "5");
+        s = calculator.calculateNextState(s, "*");
+        assert.equal(JSON.parse(s).display, "0");
+        s = calculator.calculateNextState(s, "4");
+        assert.equal(JSON.parse(s).display, "4");
+        s = calculator.calculateNextState(s, "=");
+        assert.equal(JSON.parse(s).display, "0");
+    });
+
     it('should verify a flow', () => {
         let s = null;
         s = calculator.calculateNextState(s, "1");

@@ -2,27 +2,45 @@
 <html>
 <head>
 </head>
-<body>
-    <h1>This is our calculator</h1>
+<span style="color: white; font-size: large"><body background="background.jpg">
+    <h1>This is ou calculator</h1>
     <form id="exp_form">
         Expression: <input type="text" id="expression"><br>
-        <br>
         <input type="button" onclick="calculate()" value="submit">
     </form>
-    <div id="result"> </div>
+    <span style="font-size: xx-large"><div id="result" > </div></span>
 
-</body>
+</body></span>
 <script>
     async function calculate() {
         const expr = document.getElementById("expression").value;
         var que = {
             method: 'POST',
             headers: {'Content-Type': "application/json"},
-            body: JSON.stringify({exp: expr})
+            body: JSON.stringify({exp: expr}) //exp: expr
         };
         const response = await fetch('/calculate', que);
         const json  = await response.json();
         document.getElementById('result').textContent = json.value;
+        // }
+    }
+
+    // async function getCounter(){
+    //     const response = await fetch('/counter')
+    //     const json  = await response.json()
+    //
+    //     console.log(json)
+    //
+    //     document.getElementById('counter').textContent = json.value
+    // }
+    //
+    // window.onload = getCounter
+
+    async function incrementCounter(){
+        const response = await fetch('/calculate', {method:'POST'})
+        const json  = await response.json()
+
+        document.getElementById('counter').textContent = json.value
     }
 </script>
 </html>

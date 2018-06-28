@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/abendayan/web/issues"
   },
-  "homepage": "https://github.com/abendayan/web#readme"
+  "homepage": "https://github.com/abendayan/web#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }

@@ -51,3 +51,7 @@ You can change the port 49160 to something else.
 ### Docker-Compose
 
 TODO
+
+#### E2E tests
+
+TODO 

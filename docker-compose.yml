@@ -1,8 +1,24 @@
-version: '3'
+version: '3.3'
 services:
-  web:
-    build: .
+  currency-calculator:
+    image: "web:currency-calculator"
+  currency-frontend:
+    image: "webdevtoolsandtech/currency-frontend"
+  user-service:
+    image: "webdevtoolsandtech/user-service"
+    environment:
+     - REDIS_ADDRESS=localhost:6379
+  currency-backend:
+    image: "web:node-web-app"
     ports:
      - "49160:3000"
+    environment:
+     - REDIS_ADDRESS=localhost:6379
+     - SESSION_SECRET:lala
+     - USER_SERVICE_ADDRESS:localhost:49160
+     - FRONTEND_ADDRESS:localhost:49160
+     - CALCULATOR_ADDRESS:localhost:49160
   redis:
     image: "redis:alpine"
+    ports:
+     - "6379"

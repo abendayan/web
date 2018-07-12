@@ -1,4 +1,4 @@
-let calculator = require('../calculator.js')
+let calculator = require('../currency-calculator/calculator.js')
 var assert = require('assert');
 
 describe('Test the functionnalities of the calculator', () => {
@@ -32,7 +32,7 @@ describe('Test the functionnalities of the calculator', () => {
         s = calculator.calculateNextState(s, "3");
         assert.equal(JSON.parse(s).display, "3");
         s = calculator.calculateNextState(s, "=");
-        assert.equal(JSON.parse(s).display, "8");        
+        assert.equal(JSON.parse(s).display, "8");
     });
 
     it('should verify numbers after =', () => {
@@ -42,7 +42,7 @@ describe('Test the functionnalities of the calculator', () => {
         s = calculator.calculateNextState(s, "=");
         assert.equal(JSON.parse(s).display, "5");
         s = calculator.calculateNextState(s, "6");
-        assert.equal(JSON.parse(s).display, "6");                
+        assert.equal(JSON.parse(s).display, "6");
     });
 
     it('should verify a chaining of operators', () => {
@@ -101,7 +101,7 @@ describe('Test the functionnalities of the calculator', () => {
         s = calculator.calculateNextState(s, "+");
         assert.equal(JSON.parse(s).display, "12");
         s = calculator.calculateNextState(s, "4");
-        assert.equal(JSON.parse(s).display, "4");        
+        assert.equal(JSON.parse(s).display, "4");
         s = calculator.calculateNextState(s, "3");
         assert.equal(JSON.parse(s).display, "43");
         s = calculator.calculateNextState(s, "=");

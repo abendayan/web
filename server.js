@@ -1,4 +1,4 @@
-let calculator = require('./calculator.js') //import calculator.js
+let calculator = require('./currency-calculator/calculator.js') //import calculator.js
 const express = require('express')
 const app = express()
 var bodyParser = require('body-parser');

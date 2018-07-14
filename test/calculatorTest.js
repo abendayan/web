@@ -1,4 +1,4 @@
-let calculator = require('../currency-calculator/calculator.js')
+let calculator = require('../calculator.js')
 var assert = require('assert');
 
 describe('Test the functionnalities of the calculator', () => {

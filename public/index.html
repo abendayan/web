@@ -17,7 +17,7 @@
         var que = {
             method: 'POST',
             headers: {'Content-Type': "application/json"},
-            body: JSON.stringify({exp: expr}) //exp: expr
+            body: JSON.stringify({input: expr}) //exp: expr
         };
         const response = await fetch('/calculate', que);
         const json  = await response.json();
@@ -40,7 +40,7 @@
         const response = await fetch('/calculate', {method:'POST'})
         const json  = await response.json()
 
-        document.getElementById('counter').textContent = json.value
+        document.getElementById('counter').textContent = json.display
     }
 </script>
 </html>

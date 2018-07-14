@@ -9,14 +9,14 @@ app.use(express.static(__dirname + '/public'))
 let s = null;
 
 app.post('/calculate', function(req, res){
-    let expr = req.body.exp
+    let expr = req.body.input;
     let letter;
     while (expr.length > 0) {
         letter = expr.charAt(0)
         expr = expr.slice(1)
         s = calculator.calculateNextState(s, letter);
     }
-    res.json({value:JSON.parse(s).display})
+    res.json({display:JSON.parse(s).display})
 })
 
 //listen to port

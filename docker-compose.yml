@@ -2,6 +2,8 @@ version: '3.3'
 services:
   currency-calculator:
     build: .
+    environment:
+      PORT: '3000'
 
   currency-frontend:
     image: webdevtoolsandtech/currency-frontend

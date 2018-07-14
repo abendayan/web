@@ -50,8 +50,11 @@ Run:
 You can change the port 49160 to something else.
 ### Docker-Compose
 
-TODO
+Run:
+
+    docker-compose build
+    docker-compose up
 
 #### E2E tests
 
-TODO 
+TODO

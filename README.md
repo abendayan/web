@@ -29,7 +29,8 @@ Other option: run through the browser 'http://localhost:3000/' and after each in
 
 ### Integration Test
 In the terminal, write:
-npm test
+
+        npm test
 
 ## Docker
 

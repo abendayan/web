@@ -28,8 +28,8 @@ In the terminal, write:
 Other option: run through the browser 'http://localhost:3000/' and after each input, press "submit".
 
 ### Integration Test
-
-TODO
+In the terminal, write:
+npm test
 
 ## Docker
 

@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'))
 let s = null;
 
 app.post('/calculate', function(req, res){
-    let expr = req.body.input;
+    let expr = req.body.input
     let letter;
     while (expr.length > 0) {
         letter = expr.charAt(0)
@@ -20,4 +20,5 @@ app.post('/calculate', function(req, res){
 })
 
 //listen to port
-app.listen(3000, () => console.log('listening...'))
+var server = app.listen(3000, () => console.log('listening...'))
+module.exports = server

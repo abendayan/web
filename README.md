@@ -1,7 +1,9 @@
 ## Authors
 
 Adele Bendayan 336141056
+
 Or Soffer 311119671
+
 Eti Yanay 312118599
 
 ## How to install

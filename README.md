@@ -66,7 +66,3 @@ Run:
 
     docker-compose build
     docker-compose up
-
-#### E2E tests
-
-TODO

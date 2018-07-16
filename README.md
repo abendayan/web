@@ -1,3 +1,9 @@
+## Authors
+
+Adele Bendayan 336141056
+Or Soffer
+Eti Yanai
+
 ## How to install
 * Install the dependencies by running in the root folder:
 
@@ -7,7 +13,10 @@
 
 ### Display logic
 
-TODO
+As the example on the exercise, it will always display the last number.
+For example, if the last entry was "2+34", it will display 34.
+Supports: +, -, * , /
+
 
 ### Testing
 In the terminal, write:
@@ -41,14 +50,16 @@ Run:
 
       docker build -t web/node-web-app .
 
-You can replace "web" with some other word.
 #### Running instruction
 
 Run:
 
       docker run -p 49160:3000 -d web/node-web-app
 
-You can change the port 49160 to something else.
+The website is now accessible at: http://localhost:49160
+Like previously, it can be tested using curl with:
+    curl http://localhost:49160/calculate -X POST -H 'content-type: application/json' -d '{"calculatorState": null, "input": <YOUR_INPUT>}'  
+
 ### Docker-Compose
 
 Run:

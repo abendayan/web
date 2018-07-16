@@ -1,8 +1,8 @@
 ## Authors
 
 Adele Bendayan 336141056
-Or Soffer
-Eti Yanai
+Or Soffer 311119671
+Eti Yanay 312118599
 
 ## How to install
 * Install the dependencies by running in the root folder:
